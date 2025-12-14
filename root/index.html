@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <head>
+        <title>Bookso | Home</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+        <link rel="shortcut icon" href="images/bookso-favicon.jpg" type="image/jpg">
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/bookso-logo.jpg" id="logo" style="height: 75px;">
+            <form action="/search" id="search-form"> <!-- Search bar for design --> 
+                <input type="text" placeholder="Search for a book, author, series" id="search-input">
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </div>
+        <div id="navbar">
+            <a href="">Home</a>
+            <a href="/about">About us</a>
+            <a href="/contact">Contact us</a>
+            <a class="cart-link" id="cart-icon" style="background-image: url('images/cart-icon.jpg');"></a>
+        </div>
+        <div class="cart-popup" id="cart-popup"></div>
+        <div id="topsellers">
+            <h2>Current top sellers</h2>
+            <!-- Dynamically generated book panels will be inputted from js-->
+            <script>document.body.innerHTML += createListHTML();</script>
+        </div>
+        <footer>
+            <div class="copyright">
+                <p>Copyright &copy; 2024 Saul Needham. All rights reserved.</p>
+                <p>23665465</p>
+            </div>
+        </footer>    
+    </body>
+</html>
