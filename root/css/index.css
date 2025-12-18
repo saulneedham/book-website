@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*---------------------------------Header------------------------------*/
+
+#header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    height: 80px;
+}
+
+#logo {
+    margin-left: 20px;
+    height: 30px;
+    width: 50%;
+    max-width: 300px;
+}
+
+#search-form {
+    border: 2px solid #333; 
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: 20px;
+    color: #333;
+}
+
+#search-input {
+    border: none;
+    height: 30px;
+    width: 215px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+#search-button {
+    border: none;
+    background-color: #333;
+    color: white;
+    height: 33px;
+    width: 65px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/*---------------------------------Navbar------------------------------*/
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 40px;
+}
+
+#navbar a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: rgb(57, 57, 57);
+    font-size: 14px;
+}
+
+#navbar a:last-child {
+    margin-left: auto;
+}
+
+#navbar a:hover {
+    color: rgb(210, 210, 210);
+}
+
+/*----------------------------------Cart-------------------------------*/
+
+.img-cart {
+    width: 75px;
+    height: 105px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.cart-popup {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    width: 15%;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 80%;
+}
+
+#checkout-button {
+    background-color: #393939;
+    color: white;
+    font-size: 14px;
+    height: 45px;
+    width: 110px;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cart-link {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+.cart-list li{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    padding: 20px;
+}
+
+/*----------------------------------Body-------------------------------*/
+
+#topsellers {
+    margin: 20px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.panels {
+    display: flex;
+    width: 40%;
+    margin: 2px;
+    padding: 20px;
+    background-color: rgba(200, 200, 200, 0.5);
+    color: #151314;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.panels img{
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+    display: block;
+}
+
+#purchase-button {
+    border: none;
+    background-color: #515151;
+    color: white;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/*---------------------------------Footer------------------------------*/
+
+.copyright{
+    padding: 10px;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 1rem 0;
+}
+
+/*---------------------------------Mobile------------------------------*/
+
+@media only screen and (max-width: 600px){
+
+    body {
+        font-size: 0.75em;
+    }
+
+    /*--------------------Header--------------------*/
+
+    #logo {
+        height: 20px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    #search-form { /*Removing search bar for mobile view*/
+        display: none;
+    }
+
+    .cart-popup {
+        width: 50%;
+    }
+
+    /*---------------Vertical nav bar---------------*/
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #navbar a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: rgb(57, 57, 57);
+        font-size: 14px;
+        display: block;
+    }
+
+    #navbar a:last-child {
+        margin-left: 0;
+    }
+
+    #navbar a:hover {
+        color: rgb(210, 210, 210);
+    }
+
+    /*---------------------Body--------------------*/
+    
+    .panels {
+        width: 80%; /*Making panel layout single column on mobile*/
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panels img{
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 80%;
+        max-width: 200px;
+        height: 80%;
+        max-height: 300px;
+    }
+
+    .panels button {
+        margin-top: 10px;
+        width: auto;
+    }
+
+}
