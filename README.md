@@ -1,5 +1,5 @@
 # Book-Website
-Responsive, JavaScript-driven portfolio website built with HTML and CSS that dynamically generates all project pages and content from a centralized JSON file.
+Responsive, JavaScript-driven online book shop website built with HTML and CSS that includes a functioning cart and checkout system, with credit card regex validation.
 
 ## 📘 Included Files
 
